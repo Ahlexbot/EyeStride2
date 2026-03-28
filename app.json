@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "StrideReset",
+    "slug": "stridereset",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0A0A0F"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.stridereset.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "StrideReset uses the camera to verify you are looking away from the screen during eye resets.",
+        "NSMotionUsageDescription": "StrideReset uses the pedometer to count your steps during walk resets."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0F"
+      },
+      "package": "com.stridereset.app",
+      "permissions": ["android.permission.CAMERA", "android.permission.ACTIVITY_RECOGNITION"]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "StrideReset needs camera access to verify eye resets."
+        }
+      ]
+    ]
+  }
+}
